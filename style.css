@@ -1,0 +1,77 @@
+/*Se declara en todo el documento un estilo de letra */
+
+* {
+   font-family: 'Dosis', sans-serif; 
+}
+
+/* Social card es quien cubre todo, lo utilice como referencia */
+.social-card{
+
+}
+/* Parte roja de la social card*/
+.head {
+    width: 250px;
+    height: 70px;
+    background-color: red;
+    border-radius: 5% 5% 0 0;
+}
+
+/* Parte obscura de la social card */
+.cuerpo{
+    width: 250px;
+    height: 230px;
+    background-color: black;
+    border-radius: 0 0 10% 10%;
+}
+
+/* Parte superior de la social card, en esta parte se encuentra tanto la imagen y se utiliza posicion absoluta y z index para ponerlo encima de los 2 fondos */
+
+.upperbody {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    position: absolute;
+    top: 40px;
+    color: white;
+}
+/* Propiedad de tamaño de los iconos de redes sociales */
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Se utilizo esta clase para juntar un poco mas el correo y el nombre */
+.upperbody p {
+    margin-bottom: -5px;
+}
+
+/* border radius es para hacer la imagen circular y el tamaño es de 70 pixeles para que no sea gigante */
+.profilePic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* contenedor que abarca todos los iconos de redes */
+ .social {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     margin-top: 50px;
+     width: 250px;
+ }
+
+ /* Las últimas dos clases son para que cuando se pase el cursor encima de cada una de las redes simulando que es un link */
+
+ .social-container {
+     background-color: black;
+     width: 30px;
+     height: 30px;
+ }
+
+ .social-container:hover {
+    background-color: powderblue;
+ }
