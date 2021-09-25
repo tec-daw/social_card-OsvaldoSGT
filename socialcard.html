@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Social Card</title>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root');
+
+        class SocialCard extends React.Component{
+            constructor(props){
+                super(props);
+                this.state={
+                }
+            }
+
+            render(){
+                console.log(this.props);
+                return ( //aquí dentro va puro JSX
+                //social card es el div que nos ayuda a cubrir todo, dentro del css se especifica más a detalle la funcionalidad de cada una de las clases 
+                <div className = "social-card">        
+                <div className = "head"></div>
+                <div className = "cuerpo"></div>
+                <div className = "upperbody">
+                    <img src="profilePic.jpg" className = "profilePic"/>
+                    <p>Osvaldo Gomez T</p>
+                    <p>A01273675@itesm.mx</p>
+                    <div className = "social">
+                        <div className = "social-container"> <img className = "icon" src="twitter.png" /> </div>
+                        <div className = "social-container"> <img className = "icon" src="linkedin.png" /> </div>
+                        <div className = "social-container"> <img className = "icon" src="facebook.png" /> </div>
+                    </div>
+                </div>
+                </div>
+                //Se utilizan los div como bloques para organizar el documento
+            );
+            }
+            
+        }
+
+        // Elemento render que ayuda a pintar todo, en este caso es Social Card
+        ReactDOM.render(
+            <SocialCard/>,
+            rootElement
+        )
+    </script>
+</body>
+</html>
